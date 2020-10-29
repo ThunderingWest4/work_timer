@@ -14,6 +14,8 @@ len_break = int(sysargs[3])
 
 # time.sleep(t) works with t *seconds*
 
+clr = lambda: os.system('cls')
+
 for n in range(n_cycles):
     if n_cycles>1: print(colored(f"Cycle {n+1} of {n_cycles} cycles with {len_work} minute(s) working and {len_break} minute(s) on break per cycle", 'blue')) 
     
@@ -23,4 +25,6 @@ for n in range(n_cycles):
     print(colored(f"Break Time! {len_break} minute(s) off", 'blue'))
     for i in tqdm(range(4*len_break), desc="Break time"):
         time.sleep(15)
+    clr()
+
 
